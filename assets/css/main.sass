@@ -1,0 +1,24 @@
+$base-font: Roboto, sans-serif
+$second-font: Oswald, sans-serif
+
+body
+  position: relative
+  overflow-y: scroll
+  overflow-x: hidden
+  margin: 0px
+  padding: 0px
+  font-size: 10px
+  header
+    @import header.sass
+
+  .main-content
+    margin-bottom: 5%
+    @import about.sass
+
+  footer
+    background: url("../img/footer-background.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 150px
+    text-align: center
+    @import footer.sass

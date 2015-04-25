@@ -1,0 +1,83 @@
+.about
+  h3
+    text-align: center
+    font:
+      family: $second-font
+      weight: 500
+    padding: 50px 0 20px 0
+  .face-lockup
+    margin: 0 auto
+    max-width: 630px
+    .face
+      width: 150px
+      height: 150px
+      border-radius: 50%
+      border: thin solid black
+      background: url("../img/headshot.jpg")
+    .icon1
+      background: url("../img/brush.png")
+    .icon2
+      background: url("../img/marketing.png")
+    .icon3
+      background: url("../img/camera.png")
+    .icon4
+      background: url("../img/bulb.png")
+    .icon, .face
+      float: left
+      background-size: contain
+      background-repeat: no-repeat
+      margin: 20px
+    .icon
+      width: 70px
+      height: 70px
+      margin: 80px 20px 20px 20px
+      opacity: 0.9
+  
+  .about-text
+    text-align: center
+    width: 60%
+    margin: 50px auto
+    font:
+      family: $base-font
+      size: 2em
+      weight: 300
+
+  .skills-lockup
+    max-width: 600px
+    margin: 50px auto
+    .skill-unit
+      width: 300px
+      float: left
+      padding: 0 50px 0 50px
+      .skill-label
+        font:
+          family: $base-font
+          size: 1.5em
+      .skill-icons
+        font-size: 0
+        margin: 5px 0 30px 0
+        span
+          display: inline-block
+          height: 15px
+          width: 15px
+          background-color: #703030
+          margin-right: 5px
+          border-radius: 50%
+          &:after
+            content: ''
+            width: 11px
+            height: 11px
+            display: block
+            background: white
+            border-radius: 50%
+            margin: 2px
+        
+        @for $i from 1 through 10
+          &.skill-#{$i} span:nth-child(n+#{$i+1})
+            background: #ccc
+
+
+@media screen and (max-width: 600px)
+  .skills-lockup
+    width: 300px
+
